@@ -1,0 +1,187 @@
+<div class="imagebg">
+    <mat-toolbar class="my-toolbar"> GO DRIVE
+        <button mat-button class="logout" routerLink="/customers">
+            <mat-icon class="arrow">arrow_back</mat-icon> BACK
+        </button>
+    </mat-toolbar>
+    <br><br><br>
+
+    <div>
+
+        <!-- <table class="tablemargin">
+                <tr>
+                    <th colspan="2">
+                        <h1 class="center"> CUSTOMER DETAILS </h1>
+                    </th>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        <mat-icon class="account_box">account_box</mat-icon>
+                    </td>
+                    <td>
+                        <h1 class="second">{{request.r_first_name}} {{request.r_middle_name}} {{request.r_last_name}}</h1>
+                    </td>
+                    <td><label class="first">GENDER : {{request.r_gender}}</label></td>
+                </tr>
+                <br>
+                <tr>
+                    <td> <label class="second">
+                            <mat-icon class="bigsize">call</mat-icon> : {{request.r_phone}}
+                        </label>
+                    </td>
+                    <td><label class="second">Date Of Birth : {{request.r_dob}}</label></td>
+                    <td><label class="first">Occupation : {{request.r_occupation}}</label></td>
+                </tr>
+                <br>
+                <tr>
+                    <td colspan="2"><label class="second">
+                            <mat-icon class="bigsize">home</mat-icon> : {{request.r_address}}
+                        </label>
+                    </td>
+                    <td><label class="first"> PROOF : {{request.r_idproof}} </label></td>
+                </tr>
+                <br>
+                <tr>
+                    <td><label class="second"> Allocate the available time slot : </label></td>
+                    <td>
+                        <mat-form-field  class="second">
+                            <mat-select formControlName="timeslot">
+                                <mat-option *ngFor="let timeslot of timeslots" [value]=timeslot.value>
+                                    {{timeslot.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>{{request.r_timeslot_1}} &nbsp;&nbsp;&nbsp; {{request.r_timeslot_2}}  &nbsp;&nbsp;&nbsp;  {{request.r_timeslot_3}}</td>
+                </tr>
+                <tr>
+                    
+                </tr>
+                <br>
+                <tr>
+                    <td><label class="second"> Select Trainer : </label>
+                        <mat-form-field>
+                            <mat-select  formControlName="trainer">
+                                <mat-option *ngFor="let trainer of trainers" [value]="trainer.Trainer_name">
+                                    {{trainer.Trainer_name}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                </tr>
+
+                
+                
+                <br>
+            </table> -->
+
+
+
+        <form [formGroup]="requestForm" (ngSubmit)="acceptRequest()">
+            <h1 class="center">
+                Customer Detail
+            </h1>
+            <table class="all">
+                <!-- <input formControlName="id" type="hidden" /> -->
+                <tr>
+                    <td>
+                        <mat-icon class="account_box">account_box</mat-icon>
+                    </td>
+                    <td>
+                        <mat-form-field>
+                            <input matInput formControlName="r_first_name" type="text" readonly>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput formControlName="r_last_name" type="text" readonly>
+                        </mat-form-field>
+                    </td>
+
+                    <td><label class="bigsize"> Gender : </label></td>
+                    <td>
+                        <mat-form-field>
+                            <input matInput formControlName="r_gender" type="text" readonly>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <label class="second">
+                        <mat-icon class="bigsize">call</mat-icon> :
+                    </label>
+                    <mat-form-field>
+                        <input matInput formControlName="r_phone" type="text" readonly>
+                    </mat-form-field>
+
+                    <td><label class="bigsize"> ID Proof : </label>
+                        <mat-form-field>
+                            <input matInput formControlName="r_idproof" type="text" readonly>
+                        </mat-form-field>
+                    </td>
+
+                    <td><label class="bigsize"> Date Of Birth : </label></td>
+                    <td>
+                        <mat-form-field>
+                            <input matInput formControlName="r_dob" type="date" readonly>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>
+                            <mat-icon class="second">home</mat-icon> :
+                        </label>
+                        <mat-form-field>
+                            <input matInput formControlName="r_address" type="text" readonly>
+                        </mat-form-field>
+                    </td>
+
+                    <td><label class="bigsize"> Occupation : </label>
+                        <mat-form-field>
+                            <input matInput formControlName="r_occupation" type="text" readonly>
+                        </mat-form-field>
+                    </td>
+
+                    <td><label class="bigsize"> Date Of Joining : </label></td>
+                    <td>
+                        <mat-form-field>
+                            <input matInput formControlName="r_doj" type="date" placeholder="Date Of Joining" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="bigsize2"> Select Trainer : </label>
+                        <mat-form-field class="space">
+                            <mat-select formControlName="r_trainer">
+                                <mat-option *ngFor="let trainer of trainers" [value]="trainer.Trainer_name">
+                                    {{trainer.Trainer_name}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td><label class="bigsize"> Allocate the available time slot : </label></td>
+
+                    <td>
+                        <mat-form-field>
+                            <mat-select formControlName="r_timeslot">
+                                <mat-option *ngFor="let timeslot of timeslots" [value]=timeslot.value>
+                                    {{timeslot.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>{{request.r_timeslot_1}} &nbsp;&nbsp;&nbsp; {{request.r_timeslot_2}} &nbsp;&nbsp;&nbsp;
+                        {{request.r_timeslot_3}}</td>
+                </tr>
+
+                <br>
+                <tr>
+                    <td><button type="submit" [disabled]="requestForm.invalid" class="btn1"> ACCEPT </button></td>
+                    <td><button type="reset" class="btn2"> RESET </button></td>
+                    <button class="btn2" (click)="declineRequest()"> DECLINE </button>
+                </tr>
+                <br><br>
+            </table>
+        </form>
+        
+    </div>
+    <br>
+</div>

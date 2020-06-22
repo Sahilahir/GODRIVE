@@ -1,0 +1,60 @@
+.logout{
+    margin-left: 20%;
+    font-size: 0.5cm;
+}
+.logout:hover{
+  background-color: rgb(32, 59, 117);
+}
+.btn1{
+  margin-left: 20%;
+  font-size: 0.5cm;
+}
+.btn1:hover{
+  background-color: rgb(32, 59, 117);
+}
+.btnn{
+  margin-left: 6px;
+  font-size: 0.5cm;
+}
+.btnnc{
+  margin-left: 6px;
+  font-size: 0.5cm;
+  background-color: rgb(32, 59, 117);
+}
+.btnn:hover{
+  background-color: rgb(32, 59, 117);
+}
+.center{
+  margin-left: 35%;
+}
+.my-toolbar {
+  position: fixed;
+  top: 0;
+  height: 75px;
+  font-size: 0.8cm;
+}
+.cargif{
+  margin-left: 23%;
+}
+.md-button {
+color : currentColor;
+}
+.chart-container {
+  width: 80%;
+  height: 800px;
+}
+.btn2{
+  font-family: Arial;
+  font-size: 0.5cm;
+  width: 180px;
+  height: 50px;
+  background-color: rgb(68, 38, 243);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  margin-left: 5px;
+  color: white;
+  
+}

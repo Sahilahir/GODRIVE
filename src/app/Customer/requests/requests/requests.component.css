@@ -1,0 +1,137 @@
+.background{
+    background-color: black;
+}
+.center{
+    margin-left: 600px;
+}
+.my-toolbar {
+    position: fixed;
+    background-color: rgb(51, 51, 224);
+    top: 0;
+    height: 75px;
+    font-size: 0.8cm;
+}
+.imagebg{
+    /* background-image: url('/assets/bg4.jpg'); */
+    background-color: dimgrey;
+}
+.account_box {
+    font-size: 120px;
+    margin-left: 40px;
+    color: burlywood;
+}
+table{
+    /* background-color: black; */
+    opacity: 1;
+    color:black ;
+}
+.arrow{
+    font-size: 22px;
+}
+.space{
+    margin-right: 20px;
+}
+.logout{
+    margin-left: 70%;
+    font-size: 0.5cm;
+    border: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+}
+.all{
+    margin-left: 65px;
+    border: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+}
+.logout:hover{
+    border: solid;
+    border-color: aqua;
+    border-width: 1px;
+  }
+.tablemargin{
+    margin-left: 100px;
+    border-color: lightcoral;
+    border-style: solid;
+}
+.first{
+    margin-left: 50px;
+    font-size: 30px;
+    margin-right: 10px;
+}
+.second{
+    margin-right: 10px;
+    margin-left: 35px;
+    font-size: 30px;
+}
+.bigsize{
+    font-size: 25px;
+}
+.my-toolbar{
+    opacity: 0.9;
+    color: white;
+}
+.mat-toolbar{
+    background-color: unset;
+    color: thistle;
+    font-size: 40px;
+}
+button{
+    border: tomato;
+}
+.mat-select{
+    background-color: lightsteelblue;
+    font-size: large;
+    opacity: 0.9;
+}
+
+.btn1{
+    font-family: Arial;
+    font-size: 0.5cm;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(68, 38, 243);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+    margin-left: 50%;
+    color: white;
+    
+}   
+.btn2{
+    font-family: Arial;
+    font-size: 0.5cm;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(68, 38, 243);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+    margin-left: 20px;
+    color: white;
+    
+}
+button:disabled {
+    background-color: rgb(68, 38, 243) ;
+    color: rgb(255, 255, 255);
+    cursor: not-allowed;
+    
+}
+.mat-form-field {
+    margin-left: 5px;
+    /* margin-right: 15px; */
+    font-size: 20px;
+    margin-top: 10px;
+}
+.bigsize2{
+    margin-right: 10px;
+    margin-left: 35px;
+    font-size: 25px;
+}
+
+
+

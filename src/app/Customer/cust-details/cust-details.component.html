@@ -1,0 +1,62 @@
+<div class="imagebg">
+<mat-toolbar color="primary" class="my-toolbar"> GO DRIVE
+    <button mat-button class="logout" routerLink="/customers">
+        <mat-icon class="arrow">arrow_back</mat-icon> BACK
+    </button>
+</mat-toolbar>
+ 
+    <div>
+
+        <table class="tablemargin">
+            <tr>
+                <th colspan="2">
+                    <h1 class="center">INDIVIDUAL CUSTOMER DETAILS</h1>
+                </th>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <mat-icon class="account_box">account_box</mat-icon>
+                </td>
+                <td>
+                    <h1 class="second">{{customer.First_name}} {{customer.Last_name}}</h1>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td><label class="first">GENDER : {{customer.Gender}}</label></td>
+                <td> <label class="second">
+                        <mat-icon class="bigsize">call</mat-icon> : {{customer.Mobile_number}}
+                    </label></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label class="first">Date Of Birth : {{customer.dob}}</label></td>
+                <td><label class="second"> PROOF : {{customer.Idproof}} </label></td>
+            </tr>
+            <br>
+            <tr>
+                <td colspan="2"><label class="first">
+                        <mat-icon class="bigsize">home</mat-icon> : {{customer.Address}}
+                    </label></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label class="first">Occupation : {{customer.Occupation}}</label></td>
+                <td><label class="second">Time : {{customer.Time}} </label></td>
+            </tr>
+            <br>
+            <tr>
+                <td> <label class="first">Date Of Joining : {{customer.doj}}</label></td>
+                <td><label class="second">Trainer Assigned: {{customer.Trainer}} </label></td>
+            </tr>
+            <br>
+            <tr>
+                <td> <label class="first">Last Attended Date: {{customer.date}}</label></td>
+                <td><label class="second">Progress In Kilometres : {{customer.Progress_in_km}}</label></td>
+            </tr>
+            <br>
+        </table>
+    </div>
+    <br>
+</div>

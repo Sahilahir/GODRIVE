@@ -1,0 +1,46 @@
+.logout{
+    margin-left: 20%;
+    font-size: 0.5cm;
+}
+.logout:hover{
+  background-color: rgb(32, 59, 117);
+}
+.btn1{
+  margin-left: 20%;
+  font-size: 0.5cm;
+}
+.btn1:hover{
+  background-color: rgb(32, 59, 117);
+}
+.btnn{
+  margin-left: 6px;
+  font-size: 0.5cm;
+}
+
+.btnn:hover{
+  background-color: rgb(32, 59, 117);
+}
+
+.my-toolbar {
+  position: fixed;
+  top: 0;
+  height: 75px;
+  font-size: 0.8cm;
+}
+
+.md-button {
+color : currentColor;
+}
+.centerTopic{
+  margin-left: 10px;
+}
+.center{
+  margin-left: 20px;
+}
+
+h2{
+  font-size: 0.8cm;
+}
+p{
+  font-size: 0.5cm;
+}

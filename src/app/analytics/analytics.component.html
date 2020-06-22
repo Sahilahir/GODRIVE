@@ -1,0 +1,37 @@
+<mat-toolbar color="primary" class="my-toolbar"> GO DRIVE 
+    <button mat-button class="btn1" (click)="gotoTrainers()"> TRAINERS </button>
+    <button mat-button class="btnn" (click)="gotoCustomers()"> CUSTOMER </button>
+    <button mat-button class="btnn" (click)="gotoVehicles()"> VEHICLES </button>
+    <button mat-button class="btnnc" (click)="gotoAnalytics()"> ANALYTICS </button>
+    <button mat-button class="logout" (click)="logout()">  LOGOUT </button>
+</mat-toolbar>
+<br><br><br><br>
+<mat-tab-group>
+    <mat-tab label="Customer Progress">
+        <!-- <h1>Total Customers Till Now : {{total_customers}}</h1> -->
+        <h1>Number of Customers whose progress in various ranges : <button class="btn2" (click)="chartinit()"> chart </button></h1>
+        <canvas id="densityChart" height="100" width="350"></canvas> 
+    </mat-tab>
+    <mat-tab label="Customer Count 2019"> 
+        <h1>Customer Count in 2019 according to Months : <button class="btn2" (click)="chartinit4()"> chart </button></h1>
+        <canvas id="monthChart" height="100" width="350"></canvas>
+    </mat-tab>
+    <mat-tab label="Number of Trainers">
+        <!-- <h1>Total Trainers Till Now : {{total_trainers}}</h1> -->
+        <h1>Trainer's Individual Customers : <button class="btn2" (click)="chartinit5()"> chart </button></h1>
+        <canvas id="trainerchart" height="100" width="350"></canvas>
+    </mat-tab>
+    <mat-tab label="Gender wise Customers">
+        <h1>Number of Customers according to Gender: <button class="btn2" (click)="chartinit3()"> chart </button></h1>
+        <canvas id="gender" height="90" width="550"></canvas>    
+    </mat-tab>
+    <mat-tab label="Number of Vehicles"> 
+        <h1 class="center">Number of Vehicles Onboard : {{total_vehicles}}</h1>
+        <img class="cargif" src="/assets/car4.gif">
+    </mat-tab>
+    <mat-tab label="Car's Insurance"> 
+        <h1>Cars with and without Insurance :  <button class="btn2" (click)="chartinit2()"> chart </button></h1>
+        <canvas id="insurance" height="90" width="550"></canvas>
+    </mat-tab>
+</mat-tab-group>
+

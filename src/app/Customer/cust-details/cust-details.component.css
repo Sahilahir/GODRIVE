@@ -1,0 +1,64 @@
+.background{
+    background-color: black;
+}
+.imagebg{
+    background-image: url('/assets/bg5.jpg');
+}
+.account_box {
+    font-size: 120px;
+    margin-left: 40px;
+    color: burlywood;
+}
+table{
+    background-color: black;
+    opacity: 0.9;
+    color:lightgrey ;
+}
+.arrow{
+    font-size: 22px;
+}
+.center{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.logout{
+    margin-left: 70%;
+    font-size: 0.5cm;
+    border: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+}
+.logout:hover{
+    border: solid;
+    border-color: aqua;
+    border-width: 1px;
+  }
+.tablemargin{
+    margin-left: 300px;
+    border-color: lightcoral;
+    border-style: solid;
+}
+.first{
+    margin-left: 50px;
+    font-size: 30px;
+}
+.second{
+    margin-right: 10px;
+    margin-left: 35px;
+    font-size: 30px;
+}
+.bigsize{
+    font-size: 30px;
+}
+.my-toolbar{
+    opacity: 0.9;
+    color: white;
+}
+.mat-toolbar{
+    background-color: unset;
+    color: thistle;
+    font-size: 40px;
+}
+button{
+    border: tomato;
+}

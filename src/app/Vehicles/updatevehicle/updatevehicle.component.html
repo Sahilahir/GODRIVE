@@ -1,0 +1,58 @@
+<div>
+    <mat-toolbar color="primary" class="my-toolbar"> GO DRIVE
+        <button mat-button class="logout" routerLink="/customers">
+            <mat-icon class="arrow">arrow_back</mat-icon> BACK
+        </button>
+    </mat-toolbar>
+    <br><br><br><br><br>
+    
+    <form [formGroup]="vehicleUpdateForm" (ngSubmit)="updateVehicle()">
+        <h1 class="center">
+            Vehicle Update Details
+        </h1>
+        <table class="all2">
+            <tr>
+                <td><label class="text"> Vehicle Number : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="Vehicle_number" type="text"
+                            placeholder="Vehicle Number" readonly>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="text"> Vehicle Name : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="Vehicle_name" type="text" placeholder="Vehicle Name"
+                            readonly>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="text"> Insurance : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="Insurance" type="text" placeholder="Insurance"
+                            required>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="text"> PUC Date : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="puc_date" type="date" placeholder="PUC DATE" required>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit" [disabled]="vehicleUpdateForm.invalid" class="btn1"> SUBMIT </button></td>
+                <td><button type="reset" class="btn2"> RESET </button></td>
+            </tr>
+        </table>
+        
+        
+    </form>
+
+</div>

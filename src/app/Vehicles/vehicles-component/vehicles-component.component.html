@@ -1,0 +1,88 @@
+<mat-toolbar color="primary" class="my-toolbar"> GO DRIVE
+    <button mat-button class="btnn1" (click)="gotoTrainers()"> TRAINERS </button>
+    <button mat-button class="btnn" (click)="gotoCustomers()"> CUSTOMER </button>
+    <button mat-button class="btnnc" (click)="gotoVehicles()"> VEHICLES </button>
+    <button mat-button class="btnn" (click)="gotoAnalytics()"> ANALYTICS </button>
+    <button mat-button class="logout" (click)="logout()"> LOGOUT </button>
+</mat-toolbar>
+<br><br><br><br>
+<mat-tab-group>
+    <mat-tab label="Details">
+        <div>
+            <h1 class="left">
+                Vehicles List
+            </h1>
+
+        </div>
+        <ul>
+            <li *ngFor="let vehicle of vehicles">
+                <b>
+                    <mat-icon>verified_user</mat-icon> {{vehicle.Vehicle_number}}
+                </b>
+                <b class="pxl">
+                    <mat-icon>directions_car</mat-icon> {{vehicle.Vehicle_name}}
+                </b>
+                <b class="pxl">Insurance: {{vehicle.Insurance}}</b>
+                <b class="pxl">PUC Date: {{vehicle.puc_date}}</b>
+                <button mat-button class="delete" routerLink="/updatevehicle/{{vehicle.id}}">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-button class="delete" routerLink="/deletevehicle/{{vehicle.id}}" (click)="deleteVehicle()">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                
+            </li>
+        </ul>
+    </mat-tab>
+
+    <mat-tab label="Add New">
+        <div>
+            <form [formGroup]="vehicleForm" (ngSubmit)="addVehicle()">
+                <h3 class="center">
+                    Vehicle Detail
+                </h3>
+                <table class="all">
+                    <input formControlName="id" type="hidden" />
+                    <tr>
+                        <td><label class="text"> Vehicle Number : </label></td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput formControlName="Vehicle_number" type="text"
+                                    placeholder="Vehicle Number" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="text"> Vehicle Name : </label></td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput formControlName="Vehicle_name" type="text" placeholder="Vehicle Name"
+                                    required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="text"> Insurance : </label></td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput formControlName="Insurance" type="text" placeholder="Insurance"
+                                    required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="text"> PUC Date : </label></td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput formControlName="puc_date" type="date" placeholder="PUC DATE" required>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit" [disabled]="vehicleForm.invalid" class="btn1"> SUBMIT </button>
+                <button type="reset" class="btn2"> RESET </button>
+            </form>
+
+        </div>
+    </mat-tab>
+</mat-tab-group>

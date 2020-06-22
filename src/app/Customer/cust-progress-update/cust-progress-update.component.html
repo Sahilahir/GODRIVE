@@ -1,0 +1,93 @@
+<div class="imagebg">
+    <mat-toolbar color="primary" class="my-toolbar"> GO DRIVE
+        <button mat-button class="logout" routerLink="/customers">
+            <mat-icon class="arrow">arrow_back</mat-icon> BACK
+        </button>
+    </mat-toolbar>
+    <br><br><br><br><br>
+
+    <form [formGroup]="customerprogressform" (ngSubmit)="UpdateCustomer()">
+        <h1 class="center">
+            Customer Progress
+        </h1>
+        <table class="all2">
+
+            <tr>
+                <td><label class="text"> First Name : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="First_name" type="" placeholder="First Name" readonly>
+                    </mat-form-field>
+                </td>
+                <td><label class="text"> Last Name : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="Last_name" type="" placeholder="Last Name" readonly>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="text"> Mobile Number : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="Mobile_number" type="text" placeholder="Mobile Number"
+                            readonly>
+                    </mat-form-field>
+                </td>
+                <td><label class="text"> Date Of Birth : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="dob" type="date" placeholder="Date Of Birth" readonly>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="text"> Trainer Assigned : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="Trainer" type="" placeholder="Trainer Assigned" readonly>
+                    </mat-form-field>
+                </td>
+                <!-- <td><label class="text"> Select Time Slot : </label></td>
+                        <td>
+                            <mat-form-field>
+                                <mat-select formControlName="timeslot">
+                                    <mat-option *ngFor="let timeslot of timeslots" [value]=timeslot.value>
+                                        {{timeslot.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </td> -->
+            </tr>
+            <tr>
+                <td><label class="text"> Date : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="date" type="date" placeholder="Progress Date" required>
+                    </mat-form-field>
+                </td>
+                <td><label class="text"> Progress (in km) : </label></td>
+                <td>
+                    <mat-form-field>
+                        <input matInput formControlName="Progress_in_km" type="number"
+                            placeholder="Progress in Kilometres" required>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td colspan="2">
+                    <button type="submit" [disabled]="customerprogressform.invalid" class="btn1"> Update </button>
+                </td>
+                <td colspan="2">
+                    <button type="reset" class="btn2"> RESET </button>
+                </td>
+            </tr>
+
+        </table>
+
+
+
+    </form>
+    <br><br><br><br><br>
+</div>

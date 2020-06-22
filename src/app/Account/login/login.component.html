@@ -1,0 +1,49 @@
+<mat-toolbar color="primary" class="my-toolbar"> GO DRIVE
+
+
+
+</mat-toolbar>
+<br><br><br><br><br><br>
+
+<form [formGroup]="loginform" (ngSubmit)="login()">
+
+    <table class="all">
+        <h1 class="center"> LOGIN </h1>
+
+        <tr>
+
+            <td><label class="text"> E-MAIL : </label></td>
+            <td>
+                <mat-form-field>
+                    <input matInput type="text" formControlName="email" placeholder="Enter Email-ID" required>
+                </mat-form-field>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td><label class="text"> PASSWORD : </label></td>
+            <td>
+                <mat-form-field>
+                    <input matInput type="password" formControlName="password" placeholder="Enter Password" required
+                        minlength="6">
+                </mat-form-field>
+            </td>
+        </tr>
+        <br>
+
+
+    </table>
+
+    <button type="submit" [disabled]="loginform.invalid" class="btn1"> SUBMIT </button>
+    <button type="reset" class="btn2"> RESET </button>
+
+    <br><br>
+    <a class="link" routerLink="/recoverpassword"> Click here to Recover Password </a><br>
+
+
+
+
+
+
+</form>

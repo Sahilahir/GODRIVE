@@ -1,0 +1,71 @@
+.logout{
+    margin-left: 75%;
+    font-size: 0.5cm;
+}
+/* .imagebg{
+    background-image: url('/assets/bg4.jpg');
+} */
+.text{
+    font-size: 0.5cm;
+    
+}
+.logout:hover{
+  background-color: rgb(32, 59, 117);
+}
+.my-toolbar {
+    position: fixed;
+    top: 0;
+    height: 75px;
+    font-size: 0.8cm;
+}
+.arrow{
+    font-size: 22px;
+}
+.center{
+    margin-left: 40%;
+}
+button:disabled {
+    background-color: rgb(68, 38, 243) ;
+    color: rgb(255, 255, 255);
+    cursor: not-allowed;
+    
+}
+.btn1{
+    font-family: Arial;
+    font-size: 0.5cm;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(68, 38, 243);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+    margin-left: 50%;
+    color: white;
+    
+}   
+.btn2{
+    font-family: Arial;
+    font-size: 0.5cm;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(68, 38, 243);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+    margin-left: 0px;
+    color: white;
+    
+}
+.all2{
+    margin-left: 25%;
+}
+.mat-form-field {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+    margin-top: 10px;
+}
